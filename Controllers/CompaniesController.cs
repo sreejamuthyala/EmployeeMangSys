@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using EmployeeManagementSystem.Models;
+using EmployeeManagementSystem.Infrastructure;
 
 namespace EmployeeManagementSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CompanyController : ControllerBase
+    public class CompaniesController : ControllerBase
     {
          ICRUDRepository<Companies, int> _repository;
         public CompaniesController(ICRUDRepository<Companies, int> repository) => _repository = repository;
