@@ -8,5 +8,14 @@ namespace EmployeeManagementSystem.Infrastructure
         public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options) : base(options) { }
       
         public DbSet<Employees> Employee {get; set;}
+    
     }
+     public class CompanyDbContext : DbContext
+    {
+        public CompanyDbContext(DbContextOptions<CompanyDbContext> options) : base(options) { }
+      
+        public DbSet<Companies> Company {get; set;}
+    
+    }
+
 }
